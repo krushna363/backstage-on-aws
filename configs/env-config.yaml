@@ -12,27 +12,27 @@ common:
 
   # AWS Environment
   AWS_REGION: 'us-east-1'
-  AWS_ACCOUNT: "123456789123"
+  AWS_ACCOUNT: "400350885089"
   TAG_STACK_NAME: "backstage-infra"
   TAG_STACK_PRODUCT: "platform"
 
   # Build and Infra Info 
   CONTAINER_PORT: '7000'
   CONTAINER_NAME: 'backstage'
-  DOMAIN_NAME: "backstage.example.com"
+  DOMAIN_NAME: "backstage.slsarc.com"
   ACM_ARN: "arn:aws:acm:region:account:certificate/my-certificate-name"
   ECR_REPO_NAME: "backstage"
   # optional will default to 'dockerfile'
   DOCKERFILE: 'dockerfile.prod'
 
   # CodePipeline repo info
-  GITHUB_APP_REPO: "myapprepo"
-  GITHUB_INFRA_REPO: "myinfrarepo"
-  GITHUB_ORG: 'myorg'
+  GITHUB_APP_REPO: "backstage-on-aws"
+  GITHUB_INFRA_REPO: "backstage-on-aws"
+  GITHUB_ORG: 'krushna363'
   # Github Connection for Code* services
-  CODESTAR_CONN_ARN: "arn:aws:codestar:region:account:project/resource-specifier"
+  CODESTAR_CONN_ARN: "arn:aws:codestar-connections:us-east-1:400350885089:connection/1a76c774-69af-4f5a-b519-e26d563cc080"
   # Chatbot Connection for Code* notifications
-  CODESTAR_NOTIFY_ARN: "arn:aws:chatbot:region:account:chat-configuration/slack-channel/myslackchannel"
+ # CODESTAR_NOTIFY_ARN: "arn:aws:chatbot:region:account:chat-configuration/slack-channel/myslackchannel"
   # can define the following but defaults to 'main'
   # GITHUB_INFRA_BRANCH
   # GITHUB_APP_BRANCH
