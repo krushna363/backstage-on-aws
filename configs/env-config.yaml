@@ -19,8 +19,8 @@ common:
   # Build and Infra Info 
   CONTAINER_PORT: '7000'
   CONTAINER_NAME: 'backstage'
-  DOMAIN_NAME: "backstage.slsarc.com"
-  ACM_ARN: "arn:aws:acm:us-east-1:400350885089:certificate/123401f6-ccd8-4121-b58c-bf64105bc432"
+  DOMAIN_NAME: "backstage-slsarc.com"
+  ACM_ARN: "arn:aws:acm:us-east-1:400350885089:certificate/889e32de-ca43-43e2-8f98-47d999766f5c"
   ECR_REPO_NAME: "backstage"
   # optional will default to 'dockerfile'
   DOCKERFILE: 'dockerfile.prod'
