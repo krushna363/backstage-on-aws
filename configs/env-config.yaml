@@ -20,7 +20,7 @@ common:
   CONTAINER_PORT: '7000'
   CONTAINER_NAME: 'backstage'
   DOMAIN_NAME: "backstage.slsarc.com"
-  ACM_ARN: "arn:aws:acm:region:account:certificate/my-certificate-name"
+  ACM_ARN: "arn:aws:acm:us-east-1:400350885089:certificate/123401f6-ccd8-4121-b58c-bf64105bc432"
   ECR_REPO_NAME: "backstage"
   # optional will default to 'dockerfile'
   DOCKERFILE: 'dockerfile.prod'
@@ -57,14 +57,3 @@ stages:
     # stage approval will install a manual approval gate in front of a deployment action
     STAGE_APPROVAL: False
 
-  prod:
-    ### This Config overrides for prod stage
-    # Routing & Discovery
-    HOST_NAME: 'mybackstage'
-    # github OAuth secret Name 
-    GITHUB_AUTH_SECRET_NAME: "prod-github-auth-secret"
-    # stage approval will install a manual approval gate in front of a deployment action
-    STAGE_APPROVAL: True
-    # approval emails to be notified by approval action 
-    APPROVAL_EMAILS:
-      - "devops@example.com"
