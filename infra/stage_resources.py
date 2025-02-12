@@ -105,7 +105,7 @@ class StageResourceStack(core.Construct):
 
         self.aurora_pg = rds.DatabaseCluster(
             self, "PGDatabase",
-            engine=rds.DatabaseClusterEngine.aurora_postgres(version=rds.AuroraPostgresEngineVersion.VER_10_14),
+            engine=rds.DatabaseClusterEngine.aurora_postgres(version=rds.AuroraPostgresEngineVersion.VER_11_9),
             credentials=rds.Credentials.from_secret(self.aurora_creds), 
             instance_props= crs.aurora_instance,
             #subnet_group=db_subnet_group,
